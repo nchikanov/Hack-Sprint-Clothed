@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -76,7 +76,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="showWeatherSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mvK-pk-cDq"/>
+                                                    <action selector="showColorSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9mX-N2-oih"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -91,34 +91,38 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cP9-sS-TQb" userLabel="Pickers">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3N-l8-TeW">
                                 <rect key="frame" x="0.0" y="451" width="375" height="216"/>
-                                <subviews>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3N-l8-TeW">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </pickerView>
-                                </subviews>
-                            </stackView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pickerView>
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkv-VX-0Md" userLabel="Color Picker">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="klG-Pb-Pj9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0xA-d1-YbR"/>
+                            <constraint firstItem="p3N-l8-TeW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2kf-vv-sti"/>
+                            <constraint firstItem="xkv-VX-0Md" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2pZ-fe-47K"/>
                             <constraint firstAttribute="trailing" secondItem="VVp-RY-pYk" secondAttribute="trailing" id="3NL-dc-pzC"/>
                             <constraint firstItem="1Ov-XH-YHt" firstAttribute="top" secondItem="klG-Pb-Pj9" secondAttribute="bottom" constant="20" id="6ef-vU-LYS"/>
                             <constraint firstItem="VVp-RY-pYk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7QD-Fn-0ev"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="p3N-l8-TeW" secondAttribute="bottom" id="DS9-h9-drD"/>
                             <constraint firstItem="klG-Pb-Pj9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="140" id="FPf-e1-wbU"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cP9-sS-TQb" secondAttribute="bottom" id="Ik1-hX-uXo"/>
-                            <constraint firstItem="cP9-sS-TQb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Klp-GZ-lHh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xkv-VX-0Md" secondAttribute="bottom" id="IDN-lB-54E"/>
                             <constraint firstItem="VVp-RY-pYk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ymd-nc-eNB"/>
-                            <constraint firstItem="cP9-sS-TQb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i1R-SP-tFF"/>
-                            <constraint firstAttribute="trailing" secondItem="cP9-sS-TQb" secondAttribute="trailing" id="mlf-FU-bMH"/>
+                            <constraint firstAttribute="trailing" secondItem="xkv-VX-0Md" secondAttribute="trailing" id="adY-lX-C5W"/>
+                            <constraint firstItem="xkv-VX-0Md" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jxT-nZ-faS"/>
+                            <constraint firstItem="p3N-l8-TeW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kc0-9j-dUE"/>
+                            <constraint firstAttribute="trailing" secondItem="p3N-l8-TeW" secondAttribute="trailing" id="pYd-j4-y1F"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VVp-RY-pYk" secondAttribute="bottom" id="xLe-yw-1Qp"/>
                             <constraint firstItem="1Ov-XH-YHt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xk9-XK-jPl"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="colorPickerButton" destination="HC8-uh-015" id="vK1-iQ-vQP"/>
+                        <outlet property="colorPicker" destination="xkv-VX-0Md" id="LcC-Hr-uL3"/>
+                        <outlet property="colorPickerButton" destination="HC8-uh-015" id="ZRd-ZF-bZE"/>
                         <outlet property="greyView" destination="VVp-RY-pYk" id="cQf-6K-waj"/>
                         <outlet property="weatherPicker" destination="p3N-l8-TeW" id="iL9-l1-6G0"/>
                         <outlet property="weatherPickerButton" destination="ec4-GN-yAF" id="j54-U2-LiJ"/>
@@ -153,23 +157,56 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxs-Z0-TaI">
-                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Hat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxs-Z0-TaI">
+                                <rect key="frame" x="142" y="102" width="90" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Shirt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIO-HC-s4h">
+                                <rect key="frame" x="138" y="210" width="99" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Pants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tw-Gw-1Bz">
+                                <rect key="frame" x="133" y="323" width="108" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Shoes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvy-VH-OCq">
+                                <rect key="frame" x="132" y="444" width="110" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofW-3J-zSh">
+                                <rect key="frame" x="159" y="548" width="57" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Shuffle"/>
+                                <connections>
+                                    <action selector="randomizeAllFields:" destination="o8I-U9-hT4" eventType="touchUpInside" id="pq9-xy-REv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="label" destination="dxs-Z0-TaI" id="cZi-mu-Tfg"/>
+                        <outlet property="hatLabel" destination="dxs-Z0-TaI" id="vCA-hb-il5"/>
+                        <outlet property="pantLabel" destination="8Tw-Gw-1Bz" id="ZVF-IZ-U6f"/>
+                        <outlet property="shirtLabel" destination="pIO-HC-s4h" id="D8s-Qw-Cx5"/>
+                        <outlet property="shoeLabel" destination="Xvy-VH-OCq" id="2ds-e3-gTl"/>
+                        <outlet property="shuffleButton" destination="ofW-3J-zSh" id="JMr-y4-0vY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iz6-Jt-o3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="980" y="6"/>
+            <point key="canvasLocation" x="980" y="5.8470764617691158"/>
         </scene>
     </scenes>
 </document>
