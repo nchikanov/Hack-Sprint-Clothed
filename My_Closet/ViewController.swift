@@ -36,7 +36,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                     testOutput.append(csTitle)
                 }
                 
-                destination.testArray = testOutput
+                destination.choiceArray = testOutput
             }
         }
     }
@@ -52,7 +52,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.colorPicker.delegate = self
         
         csPickerData = ["Neutral", "Bright", "Pastel", "Solid"]
-        wPickerData = ["Sunny", "Cloudy", "Windy", "Raining", "Really Long Option"]
+        wPickerData = ["Sunny", "Cloudy", "Windy", "Rainy", "Really Long Option"]
         
         
         weatherPicker.isHidden = true

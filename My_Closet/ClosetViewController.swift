@@ -11,64 +11,177 @@ import UIKit
 
 class ClosetViewController: UIViewController {
     
-    @IBOutlet var shoeLabel: UILabel!
-    @IBOutlet var pantLabel: UILabel!
-    @IBOutlet var shirtLabel: UILabel!
-    @IBOutlet var hatLabel: UILabel!
+    @IBOutlet var hatImg: UIImageView!
+    @IBOutlet var shirtImg: UIImageView!
+    @IBOutlet var pantImg: UIImageView!
+    @IBOutlet var shoeImg: UIImageView!
     
+    @IBOutlet var shoeShuffle: UIButton!
+    @IBOutlet var pantShuffle: UIButton!
+    @IBOutlet var shirtShuffle: UIButton!
+    @IBOutlet var hatShuffle: UIButton!
     @IBOutlet var shuffleButton: UIButton!
     
-    var testArray: [String] = [String]()
-    var summerHatArray: [String] = [String]()
-    var summerShirtArray: [String] = [String]()
-    var summerPantArray: [String] = [String]()
-    var summerShoeArray: [String] = [String]()
-
+    var choiceArray: [String] = [String]()
+    
+    var rainyHatArray: [String] = ["Umbrella"]
+    var rainyShirtArray: [String] = ["Rain Jacket"]
+    var rainyPantArray: [String] = ["Leggings", "Black Jeans", "Joggers"]
+    var rainyShoeArray: [String] = ["Rain Boots", "Black Boots", "Brown Boots", "Running Shoes"]
+    
+    var sunnyHatImgs: [UIImage] = [
+        UIImage(named: "black-fedora")!,
+        UIImage(named: "straw-hat")!,
+        UIImage(named: "yellow-cap")!,
+        UIImage(named: "ucla-visor")!,
+        UIImage(named: "dubs-bucket")!
+    ]
+    
+    var sunnyShirtImgs: [UIImage] = [
+        UIImage(named: "bu-tank")!,
+        UIImage(named:"blue-tee")!,
+        UIImage(named: "stripe-tee")!,
+        UIImage(named: "bralette")!,
+        UIImage(named: "sf-giants")!
+    ]
+    
+    var sunnyPantImgs: [UIImage] = [
+        UIImage(named: "flower-shorts")!,
+        UIImage(named: "jean-shorts")!,
+        UIImage(named: "pink-skirt")!,
+        UIImage(named:"running-shorts")!
+    ]
+    
+    var sunnyShoeImgs: [UIImage] = [
+        UIImage(named: "birks")!,
+        UIImage(named: "heeled-boot")!,
+        UIImage(named: "black-sperry")!,
+        UIImage(named: "light-sperry")!,
+        UIImage(named: "nike-sneaks")!,
+        UIImage(named: "rainbow-flip")!,
+        UIImage(named: "white-converse")!
+    
+    ]
+    
+    //var dictionary: [String: [[UIImage]]] = [:]
+    //var sunnyClothes = [[UIImage]]()
+    // sunnyClothes[0] = Hats, 1 = Shirts, 2 = Pants, 3 = Shoes
+    // TODO: Need to have an indexing of each array based on Color...how we do that?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        hatShuffle.setTitle(" ", for: .normal)
+        shirtShuffle.setTitle(" ", for: .normal)
+        pantShuffle.setTitle(" ", for: .normal)
+        shoeShuffle.setTitle(" ", for: .normal)
         
-        summerHatArray = ["Fedora", "Straw Hat", "Baseball Cap", "Visor", "Helmet", "Bucket Hat"]
-        summerShirtArray = ["Tank", "Crop Top", "T-Shirt", "BU!!!!", "Bikini Top", "Jersey"]
-        summerPantArray = ["Jeans", "Khakis", "Skirt", "Shorts", "Daisy Dukes", "Bikini Bottoms"]
-        summerShoeArray = ["Flip Flops", "Sandals", "Tevas", "Vans", "Converse", "Barefoot", "Sperry's"]
+        //Note: Do we even need a dictionary to organize?
+        /*sunnyClothes.append(sunnyHatImgs)
+        sunnyClothes.append(sunnyShirtImgs)
         
-        let random = Int (arc4random_uniform(_:UInt32(summerHatArray.count)))
-        self.hatLabel.text = summerHatArray[random]
-        
-        let random1 = Int (arc4random_uniform(_:UInt32(summerShirtArray.count)))
-        self.shirtLabel.text = summerShirtArray[random1]
-        
-        let random2 = Int (arc4random_uniform(_:UInt32(summerPantArray.count)))
-        self.pantLabel.text = summerPantArray[random2]
-        
-        let random3 = Int (arc4random_uniform(_:UInt32(summerShoeArray.count)))
-        self.shoeLabel.text = summerShoeArray[random3]
-        
+        dictionary["Sunny"] = sunnyClothes*/
+        randomizeAllFields((Any).self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        for i in testArray{
-            NSLog(i) // Each item here corresponds to a category (Sunny, Pastel) 
-            // Can also access directly through testArray 
-        }
+    
     }
     
     @IBAction func randomizeAllFields(_ sender: Any) {
-        let random = Int (arc4random_uniform(_:UInt32(summerHatArray.count)))
-        self.hatLabel.text = summerHatArray[random]
+            shuffleHats((Any).self)
+            shuffleShirts((Any).self)
+            shufflePants((Any).self)
+            shuffleShoes((Any).self)
         
-        let random1 = Int (arc4random_uniform(_:UInt32(summerShirtArray.count)))
-        self.shirtLabel.text = summerShirtArray[random1]
+    } //end function
+    
+    @IBAction func shuffleHats(_ sender: Any) {
         
-        let random2 = Int (arc4random_uniform(_:UInt32(summerPantArray.count)))
-        self.pantLabel.text = summerPantArray[random2]
+        switch choiceArray[0] {
+        case "Sunny":
+            /* HATS - SUNNY */
+            let hatRand = Int (arc4random_uniform(_:UInt32(sunnyHatImgs.count+1)))
+            // Don't always need a hat
+            if (hatRand == sunnyHatImgs.count){
+                self.hatImg.image = nil
+            } else {
+                self.hatImg.image = sunnyHatImgs[hatRand]
+            }
+            break
+        case "Cloudy":
+            break
+        case "Windy":
+            break
+        case "Rainy":
+            break
+        default:
+             print("This option has not been implemented in the Hat switch statement yet")
+            break
+        }
         
-        let random3 = Int (arc4random_uniform(_:UInt32(summerShoeArray.count)))
-        self.shoeLabel.text = summerShoeArray[random3]
+    }
+    
+    @IBAction func shuffleShirts(_ sender: Any) {
+        
+        switch choiceArray[0] {
+        case "Sunny":
+            let shirtRand = Int (arc4random_uniform(_:UInt32(sunnyShirtImgs.count)))
+            self.shirtImg.image = sunnyShirtImgs[shirtRand]
+            break
+        case "Cloudy":
+            break
+        case "Windy":
+            break
+        case "Rainy":
+            break
+        default:
+            print("This option has not been implemented in the Hat switch statement yet")
+            break
+        }
+
+    
+        
+    }
+
+    @IBAction func shufflePants(_ sender: Any) {
+        
+        switch choiceArray[0] {
+        case "Sunny":
+            let pantRand = Int (arc4random_uniform(_:UInt32(sunnyPantImgs.count)))
+            self.pantImg.image = sunnyPantImgs[pantRand]
+            break
+        case "Cloudy":
+            break
+        case "Windy":
+            break
+        case "Rainy":
+            break
+        default:
+            print("This option has not been implemented in the Hat switch statement yet")
+            break
+        }
+    
+    }
+    
+    @IBAction func shuffleShoes(_ sender: Any) {
+        
+        switch choiceArray[0] {
+        case "Sunny":
+            let shoeRand = Int (arc4random_uniform(_:UInt32(sunnyShoeImgs.count)))
+            self.shoeImg.image = sunnyShoeImgs[shoeRand]
+            break
+        case "Cloudy":
+            break
+        case "Windy":
+            break
+        case "Rainy":
+            break
+        default:
+            print("This option has not been implemented in the Hat switch statement yet")
+            break
+        }
+        
     }
     
     
