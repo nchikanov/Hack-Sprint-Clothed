@@ -156,13 +156,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofW-3J-zSh">
-                                <rect key="frame" x="163" y="577" width="50" height="30"/>
-                                <state key="normal" title="Shuffle"/>
-                                <connections>
-                                    <action selector="randomizeAllFields:" destination="o8I-U9-hT4" eventType="touchUpInside" id="pq9-xy-REv"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7m-On-Hvo" userLabel="HAT">
                                 <rect key="frame" x="0.0" y="69" width="375" height="128"/>
                                 <subviews>
@@ -175,7 +168,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KwE-Vn-xfI" userLabel="Hat Image">
-                                        <rect key="frame" x="135" y="13" width="100" height="100"/>
+                                        <rect key="frame" x="137" y="4" width="100" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -193,7 +186,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EUp-2M-Gis" userLabel="Shirt Image">
-                                        <rect key="frame" x="135.74644250654933" y="11.999999999999773" width="100" height="99.999999999999972"/>
+                                        <rect key="frame" x="137" y="8" width="100" height="112"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -203,7 +196,7 @@
                                 <rect key="frame" x="0.0" y="325" width="375" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXJ-5c-ARl" userLabel="pantShuffle">
-                                        <rect key="frame" x="137" y="11" width="100" height="100"/>
+                                        <rect key="frame" x="137" y="14" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -211,64 +204,67 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TfR-dx-Igy" userLabel="Pants Image">
-                                        <rect key="frame" x="135.5" y="10" width="100" height="100"/>
+                                        <rect key="frame" x="137" y="0.0" width="100" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynj-XM-2zR" userLabel="SHOES">
-                                <rect key="frame" x="0.0" y="455" width="375" height="122"/>
+                                <rect key="frame" x="0.0" y="455" width="375" height="128"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xmm-sl-AWJ" userLabel="Shoes Image">
+                                        <rect key="frame" x="137" y="8" width="100" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WE-pY-wJD" userLabel="shoeShuffle">
-                                        <rect key="frame" x="137" y="19" width="100" height="80"/>
+                                        <rect key="frame" x="137" y="8" width="100" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="shuffleShoes:" destination="o8I-U9-hT4" eventType="touchUpInside" id="F9C-t0-MFK"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xmm-sl-AWJ" userLabel="Shoes Image">
-                                        <rect key="frame" x="135.74644250654933" y="21" width="100.00000000000023" height="80.000000000000199"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofW-3J-zSh">
+                                <rect key="frame" x="162" y="591" width="50" height="30"/>
+                                <state key="normal" title="Shuffle">
+                                    <color key="titleColor" red="0.086952440440000001" green="0.6117165685" blue="0.84475612639999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomizeAllFields:" destination="o8I-U9-hT4" eventType="touchUpInside" id="pq9-xy-REv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="W7m-On-Hvo" firstAttribute="leading" secondItem="61S-Uv-A6E" secondAttribute="leading" id="CvK-lu-xMN"/>
-                            <constraint firstItem="W7m-On-Hvo" firstAttribute="leading" secondItem="61S-Uv-A6E" secondAttribute="leading" id="FJs-Xg-o1k"/>
+                            <constraint firstItem="W7m-On-Hvo" firstAttribute="leading" secondItem="61S-Uv-A6E" secondAttribute="leading" id="6C3-a1-Fvl"/>
+                            <constraint firstItem="ofW-3J-zSh" firstAttribute="top" secondItem="ynj-XM-2zR" secondAttribute="bottom" constant="8" id="Cbu-KV-mhL"/>
                             <constraint firstItem="BDQ-vc-l0b" firstAttribute="leading" secondItem="61S-Uv-A6E" secondAttribute="leading" id="GVf-em-btO"/>
                             <constraint firstItem="BDQ-vc-l0b" firstAttribute="centerX" secondItem="61S-Uv-A6E" secondAttribute="centerX" id="I0D-Mx-tBO"/>
-                            <constraint firstAttribute="trailing" secondItem="W7m-On-Hvo" secondAttribute="trailing" id="IQB-my-5bz"/>
-                            <constraint firstItem="ofW-3J-zSh" firstAttribute="top" secondItem="ynj-XM-2zR" secondAttribute="bottom" id="Kkj-nV-M7Y"/>
-                            <constraint firstItem="yeW-ji-3QE" firstAttribute="trailing" secondItem="W7m-On-Hvo" secondAttribute="trailing" id="LSr-de-GvE"/>
-                            <constraint firstItem="yeW-ji-3QE" firstAttribute="leading" secondItem="ynj-XM-2zR" secondAttribute="leading" id="MGw-dC-ET7"/>
                             <constraint firstItem="yeW-ji-3QE" firstAttribute="leading" secondItem="61S-Uv-A6E" secondAttribute="leading" id="MWF-ge-oQs"/>
                             <constraint firstItem="ynj-XM-2zR" firstAttribute="centerX" secondItem="61S-Uv-A6E" secondAttribute="centerX" id="Mba-Fj-rUW"/>
-                            <constraint firstItem="yeW-ji-3QE" firstAttribute="top" secondItem="W7m-On-Hvo" secondAttribute="bottom" id="Oue-bL-QVH"/>
                             <constraint firstItem="BDQ-vc-l0b" firstAttribute="top" secondItem="OGl-y0-h2c" secondAttribute="bottom" constant="5" id="U57-A6-KRg"/>
-                            <constraint firstAttribute="bottom" secondItem="yeW-ji-3QE" secondAttribute="bottom" constant="342" id="Vtc-WE-N3b"/>
                             <constraint firstAttribute="bottom" secondItem="LEl-PU-ubN" secondAttribute="bottom" constant="212" id="Wbo-iA-Lcl"/>
-                            <constraint firstItem="O9E-Id-HER" firstAttribute="top" secondItem="ofW-3J-zSh" secondAttribute="bottom" constant="60" id="WdD-2e-a8D"/>
                             <constraint firstItem="LEl-PU-ubN" firstAttribute="top" secondItem="yeW-ji-3QE" secondAttribute="bottom" id="XNV-P7-As9"/>
                             <constraint firstItem="LEl-PU-ubN" firstAttribute="centerX" secondItem="61S-Uv-A6E" secondAttribute="centerX" id="Xxn-Jk-tc7"/>
-                            <constraint firstItem="yeW-ji-3QE" firstAttribute="top" secondItem="61S-Uv-A6E" secondAttribute="top" constant="197" id="a5l-pX-F4Z"/>
+                            <constraint firstItem="yeW-ji-3QE" firstAttribute="top" secondItem="61S-Uv-A6E" secondAttribute="top" constant="197" id="abc-Vu-rtn"/>
                             <constraint firstItem="ofW-3J-zSh" firstAttribute="centerX" secondItem="61S-Uv-A6E" secondAttribute="centerX" id="enY-CZ-ZK1"/>
                             <constraint firstAttribute="trailing" secondItem="LEl-PU-ubN" secondAttribute="trailing" id="f3O-cf-E5g"/>
-                            <constraint firstItem="yeW-ji-3QE" firstAttribute="leading" secondItem="W7m-On-Hvo" secondAttribute="leading" id="gBF-jp-Gim"/>
                             <constraint firstItem="ynj-XM-2zR" firstAttribute="leading" secondItem="61S-Uv-A6E" secondAttribute="leading" id="gcR-U7-DnA"/>
                             <constraint firstAttribute="trailing" secondItem="ynj-XM-2zR" secondAttribute="trailing" id="hYB-3i-zWo"/>
                             <constraint firstItem="W7m-On-Hvo" firstAttribute="top" secondItem="BDQ-vc-l0b" secondAttribute="bottom" id="hzp-dt-Ro6"/>
                             <constraint firstAttribute="trailing" secondItem="yeW-ji-3QE" secondAttribute="trailing" id="i8K-pX-9Sm"/>
+                            <constraint firstItem="LEl-PU-ubN" firstAttribute="top" secondItem="61S-Uv-A6E" secondAttribute="top" constant="325" id="iKW-wt-E8p"/>
+                            <constraint firstAttribute="trailing" secondItem="W7m-On-Hvo" secondAttribute="trailing" id="l7P-qA-OsK"/>
                             <constraint firstItem="yeW-ji-3QE" firstAttribute="centerX" secondItem="61S-Uv-A6E" secondAttribute="centerX" id="lXw-Du-G21"/>
                             <constraint firstItem="ynj-XM-2zR" firstAttribute="top" secondItem="LEl-PU-ubN" secondAttribute="bottom" id="n5c-2H-QQd"/>
                             <constraint firstAttribute="trailing" secondItem="BDQ-vc-l0b" secondAttribute="trailing" id="rf8-g7-fzN"/>
                             <constraint firstItem="W7m-On-Hvo" firstAttribute="centerX" secondItem="61S-Uv-A6E" secondAttribute="centerX" id="sly-wN-TTp"/>
-                            <constraint firstItem="yeW-ji-3QE" firstAttribute="trailing" secondItem="ynj-XM-2zR" secondAttribute="trailing" id="v86-DX-kot"/>
-                            <constraint firstAttribute="trailing" secondItem="W7m-On-Hvo" secondAttribute="trailing" id="xA8-1A-41B"/>
+                            <constraint firstAttribute="bottom" secondItem="ynj-XM-2zR" secondAttribute="bottom" constant="84" id="wCc-op-3Ua"/>
                             <constraint firstItem="LEl-PU-ubN" firstAttribute="leading" secondItem="61S-Uv-A6E" secondAttribute="leading" id="xbu-RM-ejg"/>
                             <constraint firstItem="yeW-ji-3QE" firstAttribute="top" secondItem="W7m-On-Hvo" secondAttribute="bottom" id="ykF-Yt-WNe"/>
                         </constraints>

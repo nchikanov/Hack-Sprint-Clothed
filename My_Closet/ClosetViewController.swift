@@ -32,15 +32,21 @@ class ClosetViewController: UIViewController {
     var sunNeutralHat: [UIImage] = [
         UIImage(named: "black-fedora")!,
         UIImage(named: "straw-hat")!,
-        UIImage(named: "ucla-visor")!
+        UIImage(named: "ucla-visor")!,
+        UIImage(named: "raybans")!
     ]
     
     var sunNeutralShirt: [UIImage] = [
-        UIImage(named: "stripe-tee")!
+        UIImage(named: "stripe-tee")!,
+        UIImage(named: "neutral-eminem")!,
+        UIImage(named: "grey-loose-shirt")!
     ]
     
     var sunNeutralPant: [UIImage] = [
-        UIImage(named:"running-shorts")!
+        UIImage(named:"running-shorts")!,
+        UIImage(named: "black-jean-shorts")!,
+        UIImage(named: "grey-sweat-shorts")!,
+        UIImage(named: "white-jean-shorts")!
     ]
     
     var sunNeutralShoe: [UIImage] = [
@@ -53,11 +59,13 @@ class ClosetViewController: UIViewController {
     
     // NEUTRAL - RAIN
     var rainNeutralHat: [UIImage] = [
-        UIImage(named: "blk-umbrella")!
+        UIImage(named: "blk-umbrella")!,
+        UIImage(named: "blk-hat")!
     ]
     
     var rainNeutralShirt: [UIImage] = [
-        UIImage(named: "black-poncho")!
+        UIImage(named: "black-poncho")!,
+        UIImage(named: "grey-northface")!
     ]
     
     var rainNeutralPant: [UIImage] = [
@@ -78,12 +86,14 @@ class ClosetViewController: UIViewController {
     ]
     
     var sunBrightShirt: [UIImage] = [
-       
+        UIImage(named: "blue-calvin-bra")!,
+        UIImage(named: "tie-dye-shirt")!
     ]
     
     var sunBrightPant: [UIImage] = [
-        UIImage(named: "flower-shorts")!,
-        UIImage(named: "pink-skirt")!
+        UIImage(named: "purple-shorts")!,
+        UIImage(named: "pink-skirt")!,
+        UIImage(named: "bright-nike-leggings")!
     ]
     
     var sunBrightShoe: [UIImage] = [
@@ -103,7 +113,7 @@ class ClosetViewController: UIViewController {
     ]
     
     var rainBrightPant: [UIImage] = [
-    
+        UIImage(named: "bright-nike-leggings")!
     ]
     
     var rainBrightShoe: [UIImage] = [
@@ -117,7 +127,8 @@ class ClosetViewController: UIViewController {
         UIImage(named: "straw-hat")!,
         UIImage(named: "yellow-cap")!,
         UIImage(named: "ucla-visor")!,
-        UIImage(named: "dubs-bucket")!
+        UIImage(named: "dubs-bucket")!,
+        UIImage(named: "ucla-lblue-hat")!
     ]
     
     var sunSolidShirt: [UIImage] = [
@@ -127,6 +138,10 @@ class ClosetViewController: UIViewController {
     
     var sunSolidPant: [UIImage] = [
         UIImage(named: "jean-shorts")!,
+        UIImage(named: "black-jean-shorts")!,
+        UIImage(named: "grey-sweat-shorts")!,
+        UIImage(named: "white-jean-shorts")!,
+        UIImage(named: "purple-shorts")!,
         UIImage(named: "running-shorts")!
     ]
     
@@ -162,25 +177,29 @@ class ClosetViewController: UIViewController {
         UIImage(named: "blundstone")!,
         UIImage(named: "doc-marten")!,
         UIImage(named: "tan-boots")!,
-        UIImage(named: "yellow-rain-boots")!
+        UIImage(named: "yellow-rain-boots")!,
+        UIImage(named: "pastel-rain-boot")!
     ]
     
     // BRUIN - SUN
     
     var sunBruinHat: [UIImage] = [
-        UIImage(named: "ucla-visor")!
+        UIImage(named: "ucla-visor")!,
+        UIImage(named: "ucla-lblue-hat")!
     ]
     
     var sunBruinShirt: [UIImage] = [
-        UIImage(named: "bu-tank")!
+        UIImage(named: "bu-tank")!,
+        UIImage(named: "ucla-lblue-tee")!
     ]
     
     var sunBruinPant: [UIImage] = [
-        
+        UIImage(named: "ucla-shorts")!
     ]
     
     var sunBruinShoe: [UIImage] = [
-        
+        UIImage(named: "ucla-converse")!,
+        UIImage(named: "bruin-socks")!
     ]
     
     // BRUIN - RAIN
@@ -190,15 +209,17 @@ class ClosetViewController: UIViewController {
     ]
     
     var rainBruinShirt: [UIImage] = [
-
+        UIImage(named: "ucla-rain-jckt")!
     ]
     
     var rainBruinPant: [UIImage] = [
-        UIImage(named: "blue-rain-pant")!
+        UIImage(named: "blue-rain-pant")!,
+        UIImage(named: "ucla-sweats")!
     ]
 
     var rainBruinShoe: [UIImage] = [
-        UIImage(named: "yellow-rain-boots")!
+        UIImage(named: "yellow-rain-boots")!,
+        UIImage(named: "pastel-rain-boot")!
     ]
 
     
@@ -213,7 +234,7 @@ class ClosetViewController: UIViewController {
     ]
     
     var sunPastelPant: [UIImage] = [
-        UIImage(named: "flower-shorts")!,
+        UIImage(named: "purple-shorts")!,
         UIImage(named: "jean-shorts")!
     ]
     
@@ -226,7 +247,7 @@ class ClosetViewController: UIViewController {
     // PASTEL - RAIN 
     
     var rainPastelHat: [UIImage] = [
-        
+        UIImage(named: "ucla-lblue-hat")!
     ]
     
     var rainPastelShirt: [UIImage] = [
@@ -234,11 +255,11 @@ class ClosetViewController: UIViewController {
     ]
     
     var rainPastelPant: [UIImage] = [
-        
+        UIImage(named: "ucla-sweats")!
     ]
     
     var rainPastelShoe: [UIImage] = [
-        
+        UIImage(named: "pastel-rain-boot")!
     ]
     
     var dictionary: [ String: [[[UIImage]]] ] = [:]
@@ -376,14 +397,9 @@ class ClosetViewController: UIViewController {
             
                 /*RAINY*/
                 let item = dictionary["Neutral"]?[1][0]
-                let rainHatRand = Int (arc4random_uniform(_:UInt32((item?.count)!+1)))
+                let rainHatRand = Int (arc4random_uniform(_:UInt32((item?.count)!)))
                 if ((item?.count)! > 0){
-                    if (rainHatRand == (item?.count)!){
-                        self.hatImg.image = nil
-                    }
-                    else {
-                        self.hatImg.image = item?[rainHatRand]
-                    }
+                    self.hatImg.image = item?[rainHatRand]
                 }
             
             } else {
@@ -411,14 +427,9 @@ class ClosetViewController: UIViewController {
                 
                 /*RAINY*/
                 let item = dictionary["Bright"]?[1][0]
-                let rainHatRand = Int (arc4random_uniform(_:UInt32((item?.count)!+1)))
+                let rainHatRand = Int (arc4random_uniform(_:UInt32((item?.count)!)))
                 if ((item?.count)! > 0){
-                    if (rainHatRand == (item?.count)!){
-                        self.hatImg.image = nil
-                    }
-                    else {
-                        self.hatImg.image = item?[rainHatRand]
-                    }
+                    self.hatImg.image = item?[rainHatRand]
                 }
                 
             } else {
@@ -446,14 +457,9 @@ class ClosetViewController: UIViewController {
                 
                 /*RAINY*/
                 let item = dictionary["Bruin"]?[1][0]
-                let rainHatRand = Int (arc4random_uniform(_:UInt32((item?.count)!+1)))
+                let rainHatRand = Int (arc4random_uniform(_:UInt32((item?.count)!)))
                 if ((item?.count)! > 0){
-                    if (rainHatRand == (item?.count)!){
-                        self.hatImg.image = nil
-                    }
-                    else {
-                        self.hatImg.image = item?[rainHatRand]
-                    }
+                    self.hatImg.image = item?[rainHatRand]
                 }
                 
             } else {
@@ -482,14 +488,9 @@ class ClosetViewController: UIViewController {
                 
                 /*RAINY*/
                 let item = dictionary["Solid"]?[1][0]
-                let rainHatRand = Int (arc4random_uniform(_:UInt32((item?.count)!+1)))
+                let rainHatRand = Int (arc4random_uniform(_:UInt32((item?.count)!)))
                 if ((item?.count)! > 0){
-                    if (rainHatRand == (item?.count)!){
-                        self.hatImg.image = nil
-                    }
-                    else {
-                        self.hatImg.image = item?[rainHatRand]
-                    }
+                    self.hatImg.image = item?[rainHatRand]
                 }
                 
             } else {
@@ -513,18 +514,13 @@ class ClosetViewController: UIViewController {
                     }
                 }
 
-            } else if (choiceArray[0] == "Pastel"){
+            } else if (choiceArray[0] == "Rainy"){
                 
                 /*RAINY*/
                 let item = dictionary["Pastel"]?[1][0]
-                let rainHatRand = Int (arc4random_uniform(_:UInt32((item?.count)!+1)))
+                let rainHatRand = Int (arc4random_uniform(_:UInt32((item?.count)!)))
                 if ((item?.count)! > 0){
-                    if (rainHatRand == (item?.count)!){
-                        self.hatImg.image = nil
-                    }
-                    else {
-                        self.hatImg.image = item?[rainHatRand]
-                    }
+                   self.hatImg.image = item?[rainHatRand]
                 }
                 
             } else {
