@@ -51,8 +51,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.colorPicker.dataSource = self
         self.colorPicker.delegate = self
         
-        csPickerData = ["Neutral", "Bright", "Pastel", "Solid"]
-        wPickerData = ["Sunny", "Cloudy", "Windy", "Rainy", "Really Long Option"]
+        csPickerData = ["Neutral", "Bright", "Pastel", "Solid", "Bruin"]
+        wPickerData = ["Sunny", "Rainy", "Cloudy", "Windy"]
         
         
         weatherPicker.isHidden = true
