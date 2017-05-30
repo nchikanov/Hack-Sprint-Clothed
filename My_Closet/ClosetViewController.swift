@@ -63,6 +63,33 @@ class ClosetViewController: UIViewController {
     
     ]
     
+    var rainHatImgs: [UIImage] = [
+        UIImage(named: "umbrella-hat")!,
+        UIImage(named: "ucla-umbrella")!,
+        UIImage(named: "blk-umbrella")!,
+        UIImage(named: "black-fedora")!
+    ]
+    
+    var rainShirtImgs: [UIImage] = [
+        UIImage(named: "black-poncho")!,
+        UIImage(named: "blue-rain-jckt")!,
+        UIImage(named: "lblue-rain-jckt")!
+    ] // Maybe can have two images here for shirt and for jacket
+    
+    var rainPantImgs: [UIImage] = [
+        UIImage(named: "blck-legging")!,
+        UIImage(named: "blk-rip-jean")!,
+        UIImage(named: "blue-rain-pant")!,
+        UIImage(named: "khaki-jogger")!
+    ]
+    
+    var rainShoeImgs: [UIImage] = [
+        UIImage(named: "blundstone")!,
+        UIImage(named: "doc-marten")!,
+        UIImage(named: "tan-boots")!,
+        UIImage(named: "yellow-rain-boots")!
+    ]
+    
     //var dictionary: [String: [[UIImage]]] = [:]
     //var sunnyClothes = [[UIImage]]()
     // sunnyClothes[0] = Hats, 1 = Shirts, 2 = Pants, 3 = Shoes
@@ -114,6 +141,15 @@ class ClosetViewController: UIViewController {
         case "Windy":
             break
         case "Rainy":
+            /* HATS - SUNNY */
+            let hatRand = Int (arc4random_uniform(_:UInt32(rainHatImgs.count+1)))
+            // Don't always need a hat
+            if (hatRand == rainHatImgs.count){
+                self.hatImg.image = nil
+            } else {
+                self.hatImg.image = rainHatImgs[hatRand]
+            }
+
             break
         default:
              print("This option has not been implemented in the Hat switch statement yet")
@@ -134,6 +170,8 @@ class ClosetViewController: UIViewController {
         case "Windy":
             break
         case "Rainy":
+            let shirtRand = Int (arc4random_uniform(_:UInt32(rainShirtImgs.count)))
+            self.shirtImg.image = rainShirtImgs[shirtRand]
             break
         default:
             print("This option has not been implemented in the Hat switch statement yet")
@@ -156,6 +194,8 @@ class ClosetViewController: UIViewController {
         case "Windy":
             break
         case "Rainy":
+            let pantRand = Int (arc4random_uniform(_:UInt32(rainPantImgs.count)))
+            self.pantImg.image = rainPantImgs[pantRand]
             break
         default:
             print("This option has not been implemented in the Hat switch statement yet")
@@ -176,6 +216,9 @@ class ClosetViewController: UIViewController {
         case "Windy":
             break
         case "Rainy":
+            let shoeRand = Int (arc4random_uniform(_:UInt32(rainShoeImgs.count)))
+            self.shoeImg.image = rainShoeImgs[shoeRand]
+
             break
         default:
             print("This option has not been implemented in the Hat switch statement yet")
